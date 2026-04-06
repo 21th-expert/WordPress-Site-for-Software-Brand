@@ -3,68 +3,33 @@
   "version": 2,
   "settings": {
     "color": {
-      "custom": false,
+      "custom": true,
       "palette": [
-        {
-          "slug": "primary",
-          "color": "#0f172a",
-          "name": "Midnight"
-        },
-        {
-          "slug": "secondary",
-          "color": "#2563eb",
-          "name": "Blue"
-        },
-        {
-          "slug": "accent",
-          "color": "#38bdf8",
-          "name": "Aqua"
-        },
-        {
-          "slug": "background",
-          "color": "#f8fafc",
-          "name": "Background"
-        },
-        {
-          "slug": "surface",
-          "color": "#ffffff",
-          "name": "Surface"
-        }
+        { "slug": "primary",    "color": "#0f172a", "name": "Midnight"   },
+        { "slug": "secondary",  "color": "#2563eb", "name": "Blue"       },
+        { "slug": "accent",     "color": "#38bdf8", "name": "Aqua"       },
+        { "slug": "background", "color": "#f8fafc", "name": "Background" },
+        { "slug": "surface",    "color": "#ffffff", "name": "Surface"    },
+        { "slug": "muted",      "color": "#64748b", "name": "Muted"      }
       ]
     },
     "typography": {
       "fontFamilies": [
-        {
-          "fontFamily": "Inter, system-ui, sans-serif",
-          "name": "Inter"
-        }
+        { "fontFamily": "'Inter', system-ui, sans-serif", "slug": "inter", "name": "Inter" }
       ],
       "fontSizes": [
-        {
-          "slug": "small",
-          "size": "14px",
-          "name": "Small"
-        },
-        {
-          "slug": "normal",
-          "size": "18px",
-          "name": "Normal"
-        },
-        {
-          "slug": "large",
-          "size": "32px",
-          "name": "Large"
-        },
-        {
-          "slug": "hero",
-          "size": "48px",
-          "name": "Hero"
-        }
+        { "slug": "small",  "size": "14px", "name": "Small"  },
+        { "slug": "normal", "size": "18px", "name": "Normal" },
+        { "slug": "large",  "size": "32px", "name": "Large"  },
+        { "slug": "hero",   "size": "clamp(2.2rem,5vw,3.75rem)", "name": "Hero" }
       ]
     },
     "layout": {
       "contentSize": "1080px",
       "wideSize": "1200px"
+    },
+    "spacing": {
+      "units": ["px", "rem", "%", "vw"]
     }
   },
   "styles": {
@@ -73,27 +38,17 @@
       "text": "#111827"
     },
     "typography": {
-      "fontFamily": "Inter, system-ui, sans-serif",
+      "fontFamily": "var(--wp--preset--font-family--inter)",
       "fontSize": "18px",
-      "lineHeight": 1.75
+      "lineHeight": "1.75"
     },
     "elements": {
-      "h1": {
-        "typography": {
-          "fontWeight": "700",
-          "lineHeight": 1.1
-        }
-      },
-      "h2": {
-        "typography": {
-          "fontWeight": "700",
-          "lineHeight": 1.2
-        }
-      },
-      "h3": {
-        "typography": {
-          "fontWeight": "700"
-        }
+      "h1": { "typography": { "fontWeight": "700", "lineHeight": "1.15" } },
+      "h2": { "typography": { "fontWeight": "700", "lineHeight": "1.2"  } },
+      "h3": { "typography": { "fontWeight": "700" } },
+      "link": {
+        "color": { "text": "#2563eb" },
+        ":hover": { "color": { "text": "#38bdf8" } }
       }
     }
   }

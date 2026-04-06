@@ -1,19 +1,32 @@
-<!-- wp:group {"tagName":"header","align":"full","className":"site-header","style":{"spacing":{"padding":{"top":"20px","bottom":"20px"}}}} -->
-<div class="wp-block-group alignfull site-header" style="padding-top:20px;padding-bottom:20px">
-  <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"24px"}}} -->
-  <div class="wp-block-group alignwide" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px">
-    <!-- wp:site-logo {"width":120} /-->
-    <!-- wp:site-title {"level":1} /-->
-    <!-- wp:navigation {"layout":{"type":"flex","justifyContent":"right","orientation":"horizontal"}} -->
-    <nav class="wp-block-navigation">
-      <ul class="wp-block-navigation__container">
-        <li class="wp-block-navigation-item"><a href="#products">Products</a></li>
-        <li class="wp-block-navigation-item"><a href="#features">Features</a></li>
-        <li class="wp-block-navigation-item"><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <!-- /wp:navigation -->
+<!-- wp:html -->
+<header class="site-header">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">⚡ <span>Brand</span>Site</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/product/">Products</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/resources/">Resources</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="/pricing/" class="btn btn-outline" style="padding:.55rem 1.25rem;font-size:.875rem;">View Pricing</a>
+        <a href="/#contact" class="btn btn-primary" style="padding:.55rem 1.25rem;font-size:.875rem;">Get Started</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg class="icon-open" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="icon-close" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
   </div>
-  <!-- /wp:group -->
-</div>
-<!-- /wp:group -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <a href="/product/">Products</a>
+    <a href="/pricing/">Pricing</a>
+    <a href="/resources/">Resources</a>
+    <a href="/#contact">Contact</a>
+    <a href="/#contact" class="btn btn-primary">Get Started →</a>
+  </nav>
+</header>
+<!-- /wp:html -->
