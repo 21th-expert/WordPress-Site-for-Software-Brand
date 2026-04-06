@@ -131,11 +131,17 @@ p  { color: #374151; }
     letter-spacing: -.02em;
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: .6rem;
     text-decoration: none;
 }
-.nav-logo span { color: var(--secondary); }
-.nav-logo:hover { color: var(--primary); }
+.nav-logo-text {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: -.02em;
+}
+.nav-logo-text span { color: var(--secondary); }
+.nav-logo:hover { opacity: .88; }
 
 .nav-links {
     display: flex;
