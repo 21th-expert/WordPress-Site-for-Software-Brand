@@ -211,10 +211,41 @@ document.addEventListener('DOMContentLoaded', function () {
             const target = document.querySelector(link.getAttribute('href'));
             if (target) {
                 e.preventDefault();
-                const offset = 80;
+                const offset = 140;
                 const top = target.getBoundingClientRect().top + window.scrollY - offset;
                 window.scrollTo({ top: top, behavior: 'smooth' });
             }
+        });
+    });
+
+    /* ── Product subnav active on scroll ─────────────────── */
+    const subnavLinks = document.querySelectorAll('.product-subnav-inner a');
+    if (subnavLinks.length) {
+        const sections = Array.from(subnavLinks).map(function (a) {
+            return document.querySelector(a.getAttribute('href'));
+        }).filter(Boolean);
+        window.addEventListener('scroll', function () {
+            let current = '';
+            sections.forEach(function (sec) {
+                if (window.scrollY >= sec.offsetTop - 160) current = '#' + sec.id;
+            });
+            subnavLinks.forEach(function (a) {
+                a.classList.toggle('active', a.getAttribute('href') === current);
+            });
+        }, { passive: true });
+    }
+
+    /* ── Feature tabs ────────────────────────────────────── */
+    document.querySelectorAll('.feature-tabs').forEach(function (tabs) {
+        const btns   = tabs.querySelectorAll('.feature-tab-btn');
+        const panels = tabs.querySelectorAll('.feature-tab-panel');
+        btns.forEach(function (btn, i) {
+            btn.addEventListener('click', function () {
+                btns.forEach(function (b) { b.classList.remove('active'); });
+                panels.forEach(function (p) { p.classList.remove('active'); });
+                btn.classList.add('active');
+                panels[i].classList.add('active');
+            });
         });
     });
 

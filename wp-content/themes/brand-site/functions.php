@@ -47,7 +47,14 @@ function brandsite_handle_contact() {
     $body   .= "Email: {$email}\n";
     $body   .= "Company: {$company}\n";
     $body   .= "Interest: {$interest}\n\n";
-    $body   .= "Message:\n{$message}";
+    $headers = ['Content-Type: text/plain; charset=UTF-8'];
+
+    if (wp_mail($to, $subject, $body, $headers)) {
+        wp_send_json_success('Message sent successfully');
+    } else {
+        wp_send_json_error('Failed to send message');
+    }
+}
     $headers = ['Content-Type: text/plain; charset=UTF-8', 'Reply-To: ' . $email];
 
     $sent = wp_mail($to, $subject, $body, $headers);

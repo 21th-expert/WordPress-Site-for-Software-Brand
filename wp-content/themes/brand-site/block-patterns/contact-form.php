@@ -22,20 +22,41 @@
     <!-- wp:column -->
     <div class="wp-block-column">
       <!-- wp:html -->
-      <form action="#" method="post" class="contact-form">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
+      <form class="contact-form" method="post">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name *</label>
+            <input type="text" id="fname" name="fname" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name *</label>
+            <input type="text" id="lname" name="lname" required>
+          </div>
         </div>
         <div class="form-group">
-          <label for="email">Email</label>
+          <label for="email">Email *</label>
           <input type="email" id="email" name="email" required>
         </div>
         <div class="form-group">
-          <label for="message">Message</label>
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company">
+        </div>
+        <div class="form-group">
+          <label for="interest">I'm interested in</label>
+          <select id="interest" name="interest">
+            <option value="">Select an option</option>
+            <option value="demo">Requesting a demo</option>
+            <option value="pricing">Pricing information</option>
+            <option value="support">Technical support</option>
+            <option value="partnership">Partnership inquiry</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message *</label>
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
-        <button type="submit" class="wp-block-button__link has-background-color has-secondary-background-color has-text-color has-background">Send message</button>
+        <button type="submit">Send message</button>
       </form>
       <!-- /wp:html -->
     </div>
