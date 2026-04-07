@@ -1,17 +1,30 @@
 <!-- wp:template-part {"slug":"header","theme":"brand-site"} /-->
 
-<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"80px","bottom":"80px"}}}} -->
-<div class="wp-block-group alignwide" style="padding-top:80px;padding-bottom:80px">
-  <!-- wp:heading {"level":1} -->
-  <h1>Page not found</h1>
-  <!-- /wp:heading -->
-  <!-- wp:paragraph -->
-  <p>We couldn't find the page you're looking for. Use the navigation above or return to the homepage.</p>
-  <!-- /wp:paragraph -->
-  <!-- wp:button {"backgroundColor":"secondary","textColor":"background"} -->
-  <div class="wp-block-button"><a class="wp-block-button__link has-background-color has-secondary-background-color has-text-color has-background" href="/">Go home</a></div>
-  <!-- /wp:button -->
-</div>
-<!-- /wp:group -->
+<!-- wp:html -->
+<main id="main-content">
+  <section class="error-404">
+    <div class="container">
+      <div>
+        <div class="error-404-num">404</div>
+        <h2>Page not found</h2>
+        <p>The page you're looking for doesn't exist or has been moved.<br>Let's get you back on track.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="/" class="btn btn-primary">← Back to home</a>
+          <a href="/#contact" class="btn btn-outline">Contact us</a>
+        </div>
+        <div style="margin-top:3rem;">
+          <p style="color:var(--muted);font-size:.9rem;margin-bottom:1.25rem;">Or try one of these pages:</p>
+          <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;">
+            <a href="/product/" class="btn btn-outline" style="padding:.5rem 1.25rem;font-size:.875rem;">Products</a>
+            <a href="/pricing/" class="btn btn-outline" style="padding:.5rem 1.25rem;font-size:.875rem;">Pricing</a>
+            <a href="/resources/" class="btn btn-outline" style="padding:.5rem 1.25rem;font-size:.875rem;">Resources</a>
+            <a href="/about/" class="btn btn-outline" style="padding:.5rem 1.25rem;font-size:.875rem;">About</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- /wp:html -->
 
 <!-- wp:template-part {"slug":"footer","theme":"brand-site"} /-->
